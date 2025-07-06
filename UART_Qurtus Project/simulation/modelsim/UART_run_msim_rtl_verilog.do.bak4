@@ -1,0 +1,14 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+H:/KavishkaJ/UOM/Sem\ 4/Electronic\ Circuit\ Design/UART {H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/UART/uart_tx.sv}
+vlog -sv -work work +incdir+H:/KavishkaJ/UOM/Sem\ 4/Electronic\ Circuit\ Design/UART {H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/UART/uart_rx.sv}
+vlog -sv -work work +incdir+H:/KavishkaJ/UOM/Sem\ 4/Electronic\ Circuit\ Design/UART {H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/UART/uart.sv}
+vlog -sv -work work +incdir+H:/KavishkaJ/UOM/Sem\ 4/Electronic\ Circuit\ Design/UART {H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/UART/seven_segment_decoder.sv}
+vlog -sv -work work +incdir+H:/KavishkaJ/UOM/Sem\ 4/Electronic\ Circuit\ Design/UART {H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/UART/transceiver.sv}
+vlog -sv -work work +incdir+H:/KavishkaJ/UOM/Sem\ 4/Electronic\ Circuit\ Design/UART {H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/UART/transceiver_tb.sv}
+

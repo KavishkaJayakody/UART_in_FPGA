@@ -1,0 +1,115 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dH:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART/simulation/modelsim
+vtransceiver_tb
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1746880001
+!i10b 1
+!s100 81G@gPQSlW5W?Oo;V2ZI?2
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I5Ac9I4PTlPSVW6aQa>o?02
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1746550468
+8H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART/tranceiver_tb.sv
+FH:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART/tranceiver_tb.sv
+!i122 3
+L0 3 62
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1746880001.000000
+!s107 H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART/tranceiver_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART|H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART/tranceiver_tb.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work {+incdir+H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART}
+Z9 tCvgOpt 0
+vuart_rx
+R1
+R2
+!i10b 1
+!s100 0?ZOOczEG=^V@:]kCX<WO0
+R3
+I_mMnIiPBfA>Hka>lzAGK>3
+R4
+S1
+R0
+w1746477865
+8H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART/uart_rx.sv
+FH:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART/uart_rx.sv
+!i122 1
+Z10 L0 1 76
+R5
+r1
+!s85 0
+31
+R6
+!s107 H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART/uart_rx.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART|H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART/uart_rx.sv|
+!i113 1
+R7
+R8
+R9
+vuart_tx
+R1
+R2
+!i10b 1
+!s100 JGVUPg?9MCQl;96b_aCiC3
+R3
+IMkOmXLb1EiIFhn1B8Jjko0
+R4
+S1
+R0
+w1746879204
+8H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART/uart_tx.sv
+FH:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART/uart_tx.sv
+!i122 0
+R10
+R5
+r1
+!s85 0
+31
+!s108 1746880000.000000
+!s107 H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART/uart_tx.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART|H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART/uart_tx.sv|
+!i113 1
+R7
+R8
+R9
+vuart_tx_rx_tb
+R1
+R2
+!i10b 1
+!s100 G7BSZf`eF=M]SjbSSMcz:3
+R3
+IWPidVSOeJX>ol9R32VNoN1
+R4
+S1
+R0
+w1746478728
+8H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART/uart_tx_rx_tb.sv
+FH:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART/uart_tx_rx_tb.sv
+!i122 2
+L0 3 84
+R5
+r1
+!s85 0
+31
+R6
+!s107 H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART/uart_tx_rx_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART|H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART/uart_tx_rx_tb.sv|
+!i113 1
+R7
+R8
+R9

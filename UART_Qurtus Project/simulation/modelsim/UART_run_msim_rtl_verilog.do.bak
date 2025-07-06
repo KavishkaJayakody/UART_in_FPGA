@@ -1,0 +1,10 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+H:/KavishkaJ/UOM/Sem\ 4/Electronic\ Circuit\ Design/UART {H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/UART/uart_tx.sv}
+vlog -sv -work work +incdir+H:/KavishkaJ/UOM/Sem\ 4/Electronic\ Circuit\ Design/UART {H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/UART/uart_tx_tb.sv}
+

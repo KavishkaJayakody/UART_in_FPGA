@@ -1,0 +1,110 @@
+# Reading pref.tcl
+# ERROR: No extended dataflow license exists
+# do UART_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+H:/KavishkaJ/UOM/Sem\ 4/Electronic\ Circuit\ Design/FPGA\ Assignment/UART {H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART/uart_tx.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:56:40 on May 10,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART" H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART/uart_tx.sv 
+# -- Compiling module uart_tx
+# 
+# Top level modules:
+# 	uart_tx
+# End time: 17:56:41 on May 10,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+H:/KavishkaJ/UOM/Sem\ 4/Electronic\ Circuit\ Design/FPGA\ Assignment/UART {H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART/uart_rx.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:56:41 on May 10,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART" H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART/uart_rx.sv 
+# -- Compiling module uart_rx
+# 
+# Top level modules:
+# 	uart_rx
+# End time: 17:56:41 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+H:/KavishkaJ/UOM/Sem\ 4/Electronic\ Circuit\ Design/FPGA\ Assignment/UART {H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART/uart_tx_rx_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:56:41 on May 10,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART" H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART/uart_tx_rx_tb.sv 
+# -- Compiling module uart_tx_rx_tb
+# 
+# Top level modules:
+# 	uart_tx_rx_tb
+# End time: 17:56:41 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+H:/KavishkaJ/UOM/Sem\ 4/Electronic\ Circuit\ Design/FPGA\ Assignment/UART {H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART/tranceiver_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:56:41 on May 10,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART" H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART/tranceiver_tb.sv 
+# -- Compiling module transceiver_tb
+# 
+# Top level modules:
+# 	transceiver_tb
+# End time: 17:56:41 on May 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  transceiver_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" transceiver_tb 
+# Start time: 17:56:41 on May 10,2025
+# Loading sv_std.std
+# Loading work.transceiver_tb
+# ** Error: (vsim-3033) Instantiation of 'transceiver' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /transceiver_tb File: H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART/tranceiver_tb.sv Line: 22
+#         Searched libraries:
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/sgate
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_mf
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_lnsim
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cycloneive
+#             H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART/simulation/modelsim/rtl_work
+#             H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART/simulation/modelsim/rtl_work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./UART_run_msim_rtl_verilog.do PAUSED at line 14
+vsim work.uart_tx_rx_tb
+# vsim work.uart_tx_rx_tb 
+# Start time: 17:56:41 on May 10,2025
+# Loading sv_std.std
+# Loading work.uart_tx_rx_tb
+# Loading work.uart_tx
+# Loading work.uart_rx
+add wave -position insertpoint  \
+sim:/uart_tx_rx_tb/clk
+add wave -position insertpoint  \
+sim:/uart_tx_rx_tb/rstn
+add wave -position insertpoint  \
+sim:/uart_tx_rx_tb/s_ready
+add wave -position insertpoint  \
+sim:/uart_tx_rx_tb/s_data
+add wave -position insertpoint  \
+sim:/uart_tx_rx_tb/tx
+add wave -position insertpoint  \
+sim:/uart_tx_rx_tb/m_data
+add wave -position insertpoint  \
+sim:/uart_tx_rx_tb/received
+run
+# Starting simulation...
+run
+# TX: a5 -> RX: a5 PASS
+# TX: 3c -> RX: 3c PASS
+# TX: f0 -> RX: f0 PASS
+# Simulation complete.
+# ** Note: $finish    : H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART/uart_tx_rx_tb.sv(83)
+#    Time: 3745 ns  Iteration: 0  Instance: /uart_tx_rx_tb
+# 1
+# Break in Module uart_tx_rx_tb at H:/KavishkaJ/UOM/Sem 4/Electronic Circuit Design/FPGA Assignment/UART/uart_tx_rx_tb.sv line 83
+run
+# End time: 18:29:55 on May 10,2025, Elapsed time: 0:33:14
+# Errors: 1, Warnings: 0

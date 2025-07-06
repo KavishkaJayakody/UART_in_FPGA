@@ -1,0 +1,78 @@
+`timescale 1ns / 1ps
+
+module uart_tx_rx_tb;
+
+  // Parameters
+  parameter CLOCKS_PER_PULSE = 10;  // Keep small for simulation
+  parameter BITS_PER_WORD    = 8;
+
+  // Signals
+  logic clk = 0, rstn = 0;
+  logic s_valid, s_ready;
+  logic [BITS_PER_WORD-1:0] s_data;
+  logic tx, rx;
+  logic m_valid;
+  logic [BITS_PER_WORD-1:0] m_data;
+
+  // Clock generation
+  always #5 clk = ~clk;  // 100 MHz
+
+  // Instantiate TX
+  uart_tx #(
+    .CLOCKS_PER_PULSE(CLOCKS_PER_PULSE),
+    .BITS_PER_WORD(BITS_PER_WORD)
+  ) tx_inst (
+    .clk(clk),
+    .rstn(rstn),
+    .s_valid(s_valid),
+    .s_data(s_data),
+    .tx(tx),
+    .s_ready(s_ready)
+  );
+
+  // Connect TX to RX
+  assign rx = tx;
+
+  // Instantiate RX
+  uart_rx #(
+    .CLOCKS_PER_PULSE(CLOCKS_PER_PULSE),
+    .BITS_PER_WORD(BITS_PER_WORD)
+  ) rx_inst (
+    .clk(clk),
+    .rstn(rstn),
+    .rx(rx),
+    .m_valid(m_valid),
+    .m_data(m_data)
+  );
+
+  // Stimulus
+  initial begin
+    $display("Starting simulation...");
+    rstn = 0;
+    s_valid = 0;
+    s_data = 8'hA5;  // Test byte
+    #50;
+    rstn = 1;
+
+    // Wait for TX to be ready, then start transmission
+    @(posedge clk);
+    wait (s_ready);
+    s_valid = 1;
+    @(posedge clk);
+    s_valid = 0;  // Only pulse for 1 cycle
+
+    // Wait for RX to assert valid
+    wait (m_valid);
+    $display("Received: %02X", m_data);
+    
+    // Verify output
+    if (m_data == s_data)
+      $display("PASS: Data matched!");
+    else
+      $display("FAIL: Mismatch!");
+
+    #100;
+    $finish;
+  end
+
+endmodule

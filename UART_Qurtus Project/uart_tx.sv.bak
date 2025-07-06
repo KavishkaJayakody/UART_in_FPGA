@@ -1,0 +1,53 @@
+module uart_tx #(
+  parameter   CLOCKS_PER_PULSE = 5208, //200_000_000/9600
+              BITS_PER_WORD    = 8,
+              PACKET_SIZE      = BITS_PER_WORD+5,
+)(
+  input  logic clk, rstn, s_valid, 
+  input  logic [BITS_PER_WORD-1:0] s_data,
+  output logic tx, s_ready
+);  
+  localparam END_BITS = PACKET_SIZE-BITS_PER_WORD-1;
+  logic [PACKET_SIZE-1:0] s_packet;
+  
+  // Format packet: stop bits (1's), data, start bit (0)
+  assign s_packet = { ~(END_BITS'(0)), s_data, 1'b0};
+    
+  assign tx = s_packet_reg[0]; // LSB first
+  
+  // Packet register and counters
+  logic [PACKET_SIZE-1:0] s_packet_reg;
+  logic [$clog2(PACKET_SIZE)-1:0] c_bits;
+  logic [$clog2(CLOCKS_PER_PULSE)-1:0] c_clocks;
+  
+  // State Machine
+  enum {IDLE, SEND} state;
+  
+  always_ff @(posedge clk or negedge rstn) begin
+    if (!rstn) begin
+      state <= IDLE;
+      s_packet_reg <= '1; // Line is high when idle
+      c_bits <= 0;
+      c_clocks <= 0;
+    end else
+      case (state)
+        IDLE :  if (s_valid) begin                  
+                  state <= SEND;
+                  s_packet_reg <= s_packet;
+                end
+        SEND :  if (c_clocks == CLOCKS_PER_PULSE-1) begin
+                  c_clocks <= 0;
+                  if (c_bits == PACKET_SIZE-1) begin
+                    c_bits <= 0;
+                    s_packet_reg <= '1; // Line is high when idle
+                    state <= IDLE;
+                  end else begin
+                    c_bits <= c_bits + 1;
+                    s_packet_reg <= (s_packet_reg >> 1); // Shift right to send next bit
+                  end
+                end else c_clocks <= c_clocks + 1;
+      endcase
+  end
+  
+  assign s_ready = (state == IDLE);
+endmodule
